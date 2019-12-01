@@ -65,7 +65,10 @@
             prediction[i].className +
             ': ' +
             prediction[i].probability.toFixed(2);
-          labelContainer.childNodes[i].innerHTML = classPrediction;
+          //labelContainer.childNodes[i].innerHTML = classPrediction;
+          if (prediction[i].probability == 1) {
+            labelContainer.innerHTML = prediction[i].className;
+          }
         }
       }
     </script>
